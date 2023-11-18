@@ -945,16 +945,72 @@ Social Profile Entity:
 	createdAt; 
 	updatedAt;
 
+----------------------------------------------------------
+
+----- Lavanya -----
+User MS
+
+public class User {
+    private long id;
+    private String username;
+    private String email;
+    private String password;
+    private String name;
+    }
+
+User Registration:
+POST /api/users/register
+
+User login:
+POST /api/users/login
+
+User profile:
+* Get user profile:
+GET /api/users/{user_id}/profile
+* Update user profile:
+PUT /api/users/{user_id}/profile
+
+User address
+* Get user address:
+GET /api/users/{user_id}/addresses
+* Add new address
+POST /api/users/{user_id}/addresses
+*Update address
+PUT /api/users/{user_id}/addresses/{address_id}
+*Delete address
+DELETE /api/users/{user_id}/addresses/{address_id}
+
+User orders
+* Get user orders
+GET /api/users/{user_id}/orders
+* Get specific order detais
+GET /api/users/{user_id}/orders/{order_id}
+* Place an order
+POST /api/users/{user_id}/orders
+
+User Wishlist
+* Get users wishlist
+GET /api/users/{user_id}/wishlist
+* Add to wishlist
+POST /api/users/{user_id}/wishlist
+* Remove from the wishlist
+DELETE /api/users/{user_id}/wishlist/{product_id}
 
 
 
+----- Vivek -----
 
+USER MS
 
+EndPoints:
+Get/users - - to fetch all users
+Get/users/{userId} – to fetch single user
+Post/users – to save users
+Update/users/{userId} – to update user info
+Delete/users/{userId} - - to delete user
 
-
-
-
-
-
-
-
+Entity:
+String userId;
+String firstName;
+String lastName;
+Long mobileNumber;
