@@ -746,3 +746,65 @@ Wishlist Details Entity
     private String itemId;
     private String userId;
     private boolean added;
+
+-----------------------------------------------------------------------------
+
+Order MS
+
+public class Order {
+    private String orderId;
+    private String userId; 
+    private List<Product> products;
+    private double totalPrice;
+    private Date orderDate;
+    private OrderStatus status;
+
+Get order by ID:
+GET /api/orders/{order_id}
+
+Create a new order
+POST /api/orders
+
+Update order status
+PUT /api/orders/{order_id}/status
+
+Get user's orders
+GET /api/orders/user/{user_id}
+
+Get orders by status
+GET /api/orders/status/{status}
+
+Cancel an order
+DELETE /api/orders/{order_id}
+
+Get order invoice/Receipt
+GET /api/orders/{order_id}/invoice
+
+
+----- By Vivek -----
+
+ORDER MS
+
+EndPoints:
+Get/orders - - to fetch all orders
+Get/orders/users/{userId} - - to fetch all orders for specific user
+Get/orders/{orderId} – to fetch single orders
+Get/orders/{id}/{status} – to fetch single orders with status
+Post/orders – to save users
+Update/orders/{id} – to update orders info
+Delete/orders/{id} - - to delete orders
+
+Entity:
+
+String orderId;
+String userId;
+List<OrderItem> orderItems;
+double totalPrice;
+String status;
+
+OrderItem:
+String orderItemId;
+String productId;
+String productName;
+int quantity;
+double pricePerUnit;
