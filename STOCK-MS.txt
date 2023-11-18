@@ -393,3 +393,55 @@ Transaction Entity
     private double totalPrice;
     private String transactionType;
 
+----------------------------------------------------------
+
+----- Lavanya -----
+Stock MS
+
+public class stock {
+    private String productId;
+    private String name;
+    private String description;
+    private double price;
+    private String category;
+
+Get all products
+GET /api/products
+
+Get product by ID
+GET /api/products/{product_id}
+
+Create a new product
+POST /api/products
+
+Update product information
+PUT /api/products/{product_id}
+
+Delete product
+DELETE /api/products/{product_id}
+
+Search products by category
+GET /api/products/category/{category_name}
+
+Search product by keyword
+GET /api/products/search?keyword={search_keyword}
+
+
+
+----- Vivek -----
+
+Stock MS
+
+String stockIdId;
+String productId;
+String productName;
+int quantity;
+double price;
+
+Get/Stocks - - to fetch all orders
+Get/Stocks/{stockId} – to fetch single orders
+Get/Stocks/{productName} – to fetch single orders
+Get/Stocks/{productId} – to fetch single orders
+Get/Stocks/{id}/{status} – to fetch single orders
+Post/Stocks – to save users
+Update/Stocks/{id} – to update orders info
