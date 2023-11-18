@@ -1,0 +1,748 @@
+----- Orders MS -----
+
+----- POST -----
+
+OSA/api/orders
+Place a new order.
+
+OSA/apiorders/{orderId}/items/
+Add items to an existing order.
+
+OSA/api/orders/{orderId}/cancel/
+Cancel a specific order.
+
+OSA/api/orders/{orderId}/items/{itemId}/quantity/
+Update the quantity of a specific item in an order.
+
+OSA/api/orders/{orderId}/apply-promo-code/
+Apply a promotional code to a specific order.
+
+OSA/api/orders/{orderId}/payment/
+Process payment for a specific order.
+
+OSA/api/orders/{orderId}/shipping-address/
+Update the shipping address for a specific order.
+
+OSA/api/orders/{orderId}/billing-address/
+Update the billing address for a specific order.
+
+OSA/api/orders/{orderId}/items/{itemId}/return/
+Initiate a return for a specific item in an order.
+
+OSA/api/orders/{orderId}/items/{itemId}/exchange/
+Initiate an exchange for a specific item in an order.
+
+OSA/api/orders/{orderId}/track-shipment/
+Track the shipment status of a specific order.
+
+OSA/api/orders/{orderId}/rate-and-review/
+Submit a rating and review for products in a specific order.
+
+OSA/api/orders/{orderId}/add-item-to-wishlist/
+Add items from a specific order to the user's wishlist.
+
+OSA/api/orders/{orderId}/subscribe-to-updates/
+Subscribe to updates (e.g., shipment tracking) for a specific order.
+
+OSA/api/orders/{orderId}/share-on-social-media/
+Share details of a specific order on social media.
+
+OSA/api/orders/{orderId}/items/{itemId}/add-to-favorites/
+Add a specific item from an order to the user's favorites.
+
+OSA/api/orders/{orderId}/apply-gift-card/
+Apply a gift card to a specific order.
+
+OSA/api/orders/{orderId}/add-insurance/
+Add shipping insurance to a specific order.
+
+OSA/api/orders/{orderId}/split-payment/
+Split the payment for a specific order using multiple payment methods.
+
+OSA/api/orders/{orderId}/gift-wrap/
+Add gift wrapping to a specific order.
+
+OSA/api/orders/{orderId}/apply-discount-code/
+Apply a discount code to a specific order.
+
+OSA/api/orders/{orderId}/items/{itemId}/add-to-cart/
+Add a specific item from an order to the user's shopping cart.
+
+OSA/api/orders/{orderId}/request-invoice/
+Request an invoice for a specific order.
+
+OSA/api/orders/{orderId}/items/{itemId}/add-to-compare/
+Add a specific item from an order to the user's product comparison list.
+
+OSA/api/orders/{orderId}/items/{itemId}/add-to-reading-list/
+Add a specific item from an order to the user's reading list.
+
+OSA/api/orders/{orderId}/reschedule-delivery/
+Request to reschedule the delivery of a specific order.
+
+OSA/api/orders/{orderId}/add-to-subscription/
+Add the items from a specific order to the user's subscription.
+
+OSA/api/orders/{orderId}/add-to-wishlist/
+Add items from a specific order to the user's wishlist.
+
+OSA/api/orders/{orderId}/apply-reward-points/
+Apply user's reward points to get discounts on a specific order.
+
+OSA/api/orders/{orderId}/items/{itemId}/add-to-later-list/
+Add a specific item from an order to the user's "Save for Later" list.
+
+OSA/api/orders/{orderId}/items/{itemId}/mark-as-gift/
+Mark a specific item in an order as a gift.
+
+OSA/api/orders/{orderId}/items/{itemId}/add-to-library/
+Add a specific digital item from an order to the user's digital library.
+
+OSA/api/orders/{orderId}/request-refund/
+Initiate a refund request for a specific order.
+
+OSA/api/orders/{orderId}/items/{itemId}/add-to-waitlist/
+Add a specific item from an order to the user's waitlist.
+
+OSA/api/orders/{orderId}/share-via-email/
+Share details of a specific order via email.
+
+OSA/api/orders/{orderId}/items/{itemId}/add-to-gift-registry/
+Add a specific item from an order to the user's gift registry.
+
+OSA/api/orders/{orderId}/apply-store-credit/
+Apply store credit to a specific order.
+
+OSA/api/orders/{orderId}/items/{itemId}/add-to-travel-list/
+Add a specific item from an order to the user's travel shopping list.
+
+OSA/api/orders/{orderId}/request-replacement/
+Request a replacement for a specific item in an order.
+
+OSA/api/orders/{orderId}/track-return-status/
+Track the status of a return request for a specific order.
+
+OSA/api/orders/{orderId}/items/{itemId}/add-to-custom-list/
+Add a specific item from an order to a custom user-created list.
+
+OSA/api/orders/{orderId}/items/{itemId}/add-to-grocery-list/
+Add a specific grocery item from an order to the user's grocery shopping list.
+
+OSA/api/orders/{orderId}/items/{itemId}/add-to-back-in-stock-alerts/
+Add a specific item from an order to the user's back-in-stock alerts list.
+
+OSA/api/orders/{orderId}/items/{itemId}/subscribe-for-updates/
+Subscribe to updates for a specific item in an order.
+
+OSA/api/orders/{orderId}/apply-dispute/
+Apply for dispute resolution for a specific order.
+
+OSA/api/orders/{orderId}/items/{itemId}/add-to-pre-order-list/
+Add a specific item from an order to the user's pre-order list.
+
+OSA/api/orders/{orderId}/apply-loyalty-points/
+Apply user's loyalty points to get benefits for a specific order.
+
+OSA/api/orders/{orderId}/items/{itemId}/add-to-wearable-tech-list/
+Add a specific wearable tech item from an order to the user's wearable tech shopping list.
+
+OSA/api/orders/{orderId}/items/{itemId}/add-to-music-playlist/
+Add a specific music item from an order to the user's music playlist.
+
+OSA/api/orders/{orderId}/items/{itemId}/add-to-sports-wishlist/
+Add a specific sports item from an order to the user's sports wishlist.
+
+----------------------------------------------------------------------------------
+
+----- PUT -----
+
+OSA/api/orders/{orderId}/update/
+Update general information for a specific order.
+
+OSA/api/orders/{orderId}/items/{itemId}/update-quantity/
+Update the quantity of a specific item in an order.
+
+OSA/api/orders/{orderId}/update-shipping-address/
+Update the shipping address for a specific order.
+
+OSA/api/orders/{orderId}/update-billing-address/
+Update the billing address for a specific order.
+
+OSA/api/orders/{orderId}/items/{itemId}/update-options/
+Update options (e.g., size, color) for a specific item in an order.
+
+OSA/api/orders/{orderId}/items/{itemId}/apply-promo-code/
+Update the promotional code applied to a specific item in an order.
+
+OSA/api/orders/{orderId}/items/{itemId}/update-return-request/
+Update the status or details of a return request for a specific item.
+
+OSA/api/orders/{orderId}/update-payment-method/
+Update the payment method for a specific order.
+
+OSA/api/orders/{orderId}/items/{itemId}/update-review/
+Update a product review for a specific item in an order.
+
+OSA/api/orders/{orderId}/update-status/
+Update the status of a specific order.
+
+OSA/api/orders/{orderId}/items/{itemId}/update-exchange-request/
+Update the status or details of an exchange request for a specific item.
+
+OSA/api/orders/{orderId}/items/{itemId}/update-delivery-status/
+Update the delivery status of a specific item in an order.
+
+OSA/api/orders/{orderId}/items/{itemId}/update-gift-status/
+Update the gift status of a specific item in an order.
+
+OSA/api/orders/{orderId}/items/{itemId}/update-wishlist-status/
+Update the wishlist status of a specific item in an order.
+
+OSA/api/orders/{orderId}/update-shipping-method/
+Update the selected shipping method for a specific order.
+
+OSA/api/orders/{orderId}/items/{itemId}/update-grocery-status/
+Update the grocery status of a specific item in an order.
+
+OSA/api/orders/{orderId}/items/{itemId}/update-invoice-request/
+Update the status or details of an invoice request for a specific item.
+
+OSA/api/orders/{orderId}/update-subscription/
+Update subscription details for a specific order.
+
+OSA/api/orders/{orderId}/items/{itemId}/update-discount-code/
+Update the discount code applied to a specific item in an order.
+
+OSA/api/orders/{orderId}/update-gift-wrap-options/
+Update the selected gift wrapping options for a specific order.
+
+OSA/api/orders/{orderId}/items/{itemId}/update-store-credit/
+Update the store credit applied to a specific item in an order.
+
+OSA/api/orders/{orderId}/items/{itemId}/update-insurance/
+Update the shipping insurance details for a specific item in an order.
+
+OSA/api/orders/{orderId}/items/{itemId}/update-payment-split/
+Update the payment split details for a specific item in an order.
+
+OSA/api/orders/{orderId}/items/{itemId}/update-dispute-status/
+Update the status of a dispute for a specific item in an order.
+
+OSA/api/orders/{orderId}/items/{itemId}/update-pre-order-status/
+Update the pre-order status of a specific item in an order.
+
+OSA/api/orders/{orderId}/items/{itemId}/update-ship-date/
+Update the scheduled shipping date for a specific item in an order.
+
+OSA/api/orders/{orderId}/items/{itemId}/update-ship-method/
+Update the shipping method for a specific item in an order.
+
+OSA/api/orders/{orderId}/items/{itemId}/update-ship-status/
+Update the shipment status for a specific item in an order.
+
+OSA/api/orders/{orderId}/items/{itemId}/update-return-status/
+Update the status of a return for a specific item in an order.
+
+OSA/api/orders/{orderId}/items/{itemId}/update-exchange-status/
+Update the status of an exchange for a specific item in an order.
+
+OSA/api/orders/{orderId}/items/{itemId}/update-promo-status/
+Update the promotional status for a specific item in an order.
+
+OSA/api/orders/{orderId}/items/{itemId}/update-gift-status/
+Update the gift status for a specific item in an order.
+
+OSA/api/orders/{orderId}/items/{itemId}/update-wishlist-status/
+Update the wishlist status for a specific item in an order.
+
+OSA/api/orders/{orderId}/update-payment-status/
+Update the payment status for a specific order.
+
+OSA/api/orders/{orderId}/update-delivery-status/
+Update the overall delivery status for a specific order.
+
+OSA/api/orders/{orderId}/update-review-status/
+Update the status of a product review for a specific order.
+
+OSA/api/orders/{orderId}/update-return-policy/
+Update the return policy for a specific order.
+
+OSA/api/orders/{orderId}/items/{itemId}/update-grocery-status/
+Update the grocery status for a specific item in an order.
+
+OSA/api/orders/{orderId}/update-shipping-address-options/
+Update the selected shipping address options for a specific order.
+
+OSA/api/orders/{orderId}/update-billing-details/
+Update the billing details for a specific order.
+
+OSA/api/orders/{orderId}/items/{itemId}/update-subscription-status/
+Update the subscription status for a specific item in an order.
+
+OSA/api/orders/{orderId}/items/{itemId}/update-discount-status/
+Update the discount status for a specific item in an order.
+
+OSA/api/orders/{orderId}/items/{itemId}/update-gift-wrap-options/
+Update the selected gift wrap options for a specific item in an order.
+
+OSA/api/orders/{orderId}/update-loyalty-points/
+Update the loyalty points earned for a specific order.
+
+OSA/api/orders/{orderId}/items/{itemId}/update-store-credit-status/
+Update the store credit status for a specific item in an order.
+
+OSA/api/orders/{orderId}/items/{itemId}/update-insurance-status/
+Update the insurance status for a specific item in an order.
+
+OSA/api/orders/{orderId}/items/{itemId}/update-dispute-resolution/
+Update the resolution details for a dispute related to a specific item in an order.
+
+OSA/api/orders/{orderId}/update-gift-message/
+Update the gift message for a specific order.
+
+OSA/api/orders/{orderId}/items/{itemId}/update-payment-split-status/
+Update the status of payment split for a specific item in an order.
+
+OSA/api/orders/{orderId}/items/{itemId}/update-pre-order-status/
+Update the pre-order status for a specific item in an order.
+
+OSA/api/orders/{orderId}/update-shipment-tracking/
+Update the shipment tracking information for a specific order.
+
+OSA/api/orders/{orderId}/items/{itemId}/update-invoice-details/
+Update the invoice details for a specific item in an order.
+
+OSA/api/orders/{orderId}/items/{itemId}/update-availability/
+Update the availability status for a specific item in an order.
+
+OSA/api/orders/{orderId}/items/{itemId}/update-wearable-tech-status/
+Update the status of a wearable tech item in an order.
+
+OSA/api/orders/{orderId}/items/{itemId}/update-music-playlist-status/
+Update the status of a music item in an order.
+
+
+------------------------------------------------------------------------------------------------------
+
+
+
+----- GET -----
+
+OSA/api/orders/
+Retrieve a list of all orders.
+
+OSA/api/orders/{orderId}/
+Retrieve details of a specific order.
+
+OSA/api/orders/{orderId}/items/
+Retrieve a list of items in a specific order.
+
+OSA/api/orders/{orderId}/items/{itemId}/
+Retrieve details of a specific item in an order.
+
+OSA/api/orders/{orderId}/summary/
+Retrieve a summary of a specific order.
+
+OSA/api/orders/{orderId}/payment-details/
+Retrieve payment details for a specific order.
+
+OSA/api/orders/{orderId}/shipping-details/
+Retrieve shipping details for a specific order.
+
+OSA/api/orders/{orderId}/billing-details/
+Retrieve billing details for a specific order.
+
+OSA/api/orders/{orderId}/status/
+Retrieve the status of a specific order.
+
+OSA/api/orders/{orderId}/history/
+Retrieve the order history for a specific order.
+
+OSA/api/orders/{orderId}/reviews/
+Retrieve product reviews associated with a specific order.
+
+OSA/api/orders/{orderId}/track-shipment/
+Retrieve shipment tracking information for a specific order.
+
+OSA/api/orders/{orderId}/invoice/
+Retrieve the invoice for a specific order.
+
+OSA/api/orders/{orderId}/items/{itemId}/return-details/
+Retrieve details about the return process for a specific item.
+
+OSA/api/orders/{orderId}/subscription-details/
+Retrieve subscription details for a specific order.
+
+OSA/api/orders/{orderId}/items/{itemId}/exchange-details/
+Retrieve details about the exchange process for a specific item.
+
+OSA/api/orders/{orderId}/items/{itemId}/gift-details/
+Retrieve details about the gift status for a specific item.
+
+OSA/api/orders/{orderId}/wishlist-details/
+Retrieve details about how items from the order are listed in the user's wishlist.
+
+OSA/api/orders/{orderId}/items/{itemId}/waitlist-details/
+Retrieve details about the waitlist status for a specific item.
+
+OSA/api/orders/{orderId}/items/{itemId}/dispute-details/
+Retrieve details about the dispute status for a specific item.
+
+OSA/api/orders/{orderId}/items/{itemId}/pre-order-details/
+Retrieve details about the pre-order status for a specific item.
+
+OSA/api/orders/{orderId}/items/{itemId}/availability/
+Retrieve the availability status for a specific item in an order.
+
+OSA/api/orders/{orderId}/items/{itemId}/wearable-tech-details/
+Retrieve details about the wearable tech status for a specific item.
+
+OSA/api/orders/{orderId}/items/{itemId}/music-playlist-details/
+Retrieve details about the music playlist status for a specific item.
+
+OSA/api/orders/{orderId}/notifications/
+Retrieve notifications related to a specific order.
+
+OSA/api/orders/{orderId}/gift-options/
+Retrieve available gift options for a specific order.
+
+OSA/api/orders/{orderId}/loyalty-points/
+Retrieve loyalty points earned for a specific order.
+
+OSA/api/orders/{orderId}/store-credit-details/
+Retrieve details about the store credit applied to a specific order.
+
+OSA/api/orders/{orderId}/insurance-details/
+Retrieve details about the shipping insurance for a specific order.
+
+OSA/api/orders/{orderId}/payment-split-details/
+Retrieve details about the payment split for a specific order.
+
+OSA/api/orders/{orderId}/dispute-history/
+Retrieve the dispute history for a specific order.
+
+OSA/api/orders/{orderId}/return-history/
+Retrieve the return history for a specific order.
+
+OSA/api/orders/{orderId}/exchange-history/
+Retrieve the exchange history for a specific order.
+
+OSA/api/orders/{orderId}/invoice-history/
+Retrieve the invoice history for a specific order.
+
+OSA/api/orders/{orderId}/subscription-history/
+Retrieve the subscription history for a specific order.
+
+OSA/api/orders/{orderId}/promotion-history/
+Retrieve the promotion history for a specific order.
+
+OSA/api/orders/{orderId}/discount-history/
+Retrieve the discount history for a specific order.
+
+OSA/api/orders/{orderId}/gift-wrap-history/
+Retrieve the gift wrap history for a specific order.
+
+OSA/api/orders/{orderId}/shipping-method-history/
+Retrieve the shipping method history for a specific order.
+
+OSA/api/orders/{orderId}/billing-history/
+Retrieve the billing history for a specific order.
+
+OSA/api/orders/{orderId}/payment-method-history/
+Retrieve the payment method history for a specific order.
+
+OSA/api/orders/{orderId}/status-history/
+Retrieve the status change history for a specific order.
+
+OSA/api/orders/{orderId}/shipping-address-history/
+Retrieve the shipping address change history for a specific order.
+
+OSA/api/orders/{orderId}/billing-address-history/
+Retrieve the billing address change history for a specific order.
+
+OSA/api/orders/{orderId}/notification-history/
+Retrieve the notification history for a specific order.
+
+OSA/api/orders/{orderId}/wishlist-history/
+Retrieve the wishlist history for a specific order.
+
+OSA/api/orders/{orderId}/favorites-history/
+Retrieve the favorites history for a specific order.
+
+OSA/api/orders/{orderId}/cart-history/
+Retrieve the shopping cart history for a specific order.
+
+OSA/api/orders/{orderId}/view-history/
+Retrieve the browsing history for a specific order.
+
+OSA/api/orders/{orderId}/compare-history/
+Retrieve the product comparison history for a specific order.
+
+OSA/api/orders/{orderId}/history-details/
+Retrieve additional details about the order history for a specific order.
+
+OSA/api/orders/{orderId}/subscription-details-history/
+Retrieve the subscription details change history for a specific order.
+
+OSA/api/orders/{orderId}/loyalty-points-history/
+Retrieve the loyalty points change history for a specific order.
+
+OSA/api/orders/{orderId}/store-credit-history/
+Retrieve the store credit change history for a specific order.
+
+OSA/api/orders/{orderId}/insurance-history/
+Retrieve the shipping insurance change history for a specific order.
+
+
+-------------------------------------------------------------------------------------------
+
+
+----- DELETE -----
+
+OSA/api/orders/{orderId}/
+Delete a specific order.
+
+OSA/api/orders/{orderId}/items/{itemId}/
+Remove a specific item from an order.
+
+OSA/api/orders/{orderId}/cancel/
+Cancel a specific order.
+
+OSA/api/orders/{orderId}/items/{itemId}/remove-from-cart/
+Remove a specific item from the user's shopping cart.
+
+OSA/api/orders/{orderId}/items/{itemId}/return/
+Cancel the return request for a specific item in an order.
+
+OSA/api/orders/{orderId}/items/{itemId}/exchange/
+Cancel the exchange request for a specific item in an order.
+
+OSA/api/orders/{orderId}/items/{itemId}/remove-from-wishlist/
+Remove a specific item from the user's wishlist.
+
+OSA/api/orders/{orderId}/items/{itemId}/remove-from-favorites/
+Remove a specific item from the user's favorites.
+
+OSA/api/orders/{orderId}/unsubscribe-from-updates/
+Unsubscribe from updates for a specific order.
+
+OSA/api/orders/{orderId}/items/{itemId}/remove-from-reading-list/
+Remove a specific item from the user's reading list.
+
+OSA/api/orders/{orderId}/items/{itemId}/remove-from-custom-list/
+Remove a specific item from a custom user-created list.
+
+OSA/api/orders/{orderId}/items/{itemId}/remove-from-grocery-list/
+Remove a specific grocery item from the user's grocery shopping list.
+
+OSA/api/orders/{orderId}/items/{itemId}/remove-from-back-in-stock-alerts/
+Remove a specific item from the user's back-in-stock alerts list.
+
+OSA/api/orders/{orderId}/items/{itemId}/remove-from-waitlist/
+Remove a specific item from the user's waitlist.
+
+OSA/api/orders/{orderId}/items/{itemId}/remove-from-gift-registry/
+Remove a specific item from the user's gift registry.
+
+OSA/api/orders/{orderId}/items/{itemId}/remove-from-subscription/
+Remove a specific item from the user's subscription.
+
+OSA/api/orders/{orderId}/items/{itemId}/remove-from-pre-order-list/
+Remove a specific item from the user's pre-order list.
+
+OSA/api/orders/{orderId}/items/{itemId}/remove-from-later-list/
+Remove a specific item from the user's "Save for Later" list.
+
+OSA/api/orders/{orderId}/items/{itemId}/remove-from-gift-options/
+Remove a specific item from the user's gift options.
+
+OSA/api/orders/{orderId}/items/{itemId}/remove-from-loyalty-points/
+Remove a specific item from the user's loyalty points.
+
+OSA/api/orders/{orderId}/items/{itemId}/remove-from-store-credit/
+Remove a specific item from the user's store credit.
+
+OSA/api/orders/{orderId}/items/{itemId}/remove-from-insurance/
+Remove a specific item from the user's shipping insurance.
+
+OSA/api/orders/{orderId}/items/{itemId}/remove-from-payment-split/
+Remove a specific item from the payment split.
+
+OSA/api/orders/{orderId}/items/{itemId}/remove-from-dispute/
+Remove a specific item from the dispute process.
+
+OSA/api/orders/{orderId}/items/{itemId}/remove-from-history/
+Remove a specific item from the user's order history.
+
+OSA/api/orders/{orderId}/items/{itemId}/remove-from-promo/
+Remove a specific item from the promotional offers associated with an order.
+
+OSA/api/orders/{orderId}/items/{itemId}/remove-from-gift-status/
+Remove a specific item from the gift status tracking.
+
+OSA/api/orders/{orderId}/items/{itemId}/remove-from-wishlist-status/
+Remove a specific item from the wishlist status tracking.
+
+OSA/api/orders/{orderId}/items/{itemId}/remove-from-return-status/
+Remove a specific item from the return status tracking.
+
+OSA/api/orders/{orderId}/items/{itemId}/remove-from-exchange-status/
+Remove a specific item from the exchange status tracking.
+
+OSA/api/orders/{orderId}/items/{itemId}/remove-from-gift-wrap-status/
+Remove a specific item from the gift wrap status tracking.
+
+OSA/api/orders/{orderId}/items/{itemId}/remove-from-shipping-status/
+Remove a specific item from the shipping status tracking.
+
+OSA/api/orders/{orderId}/items/{itemId}/remove-from-billing-status/
+Remove a specific item from the billing status tracking.
+
+OSA/api/orders/{orderId}/items/{itemId}/remove-from-payment-method/
+Remove a specific item from the payment method tracking.
+
+OSA/api/orders/{orderId}/items/{itemId}/remove-from-review-status/
+Remove a specific item from the review status tracking.
+
+OSA/api/orders/{orderId}/items/{itemId}/remove-from-subscription-status/
+Remove a specific item from the subscription status tracking.
+
+OSA/api/orders/{orderId}/items/{itemId}/remove-from-discount-status/
+Remove a specific item from the discount status tracking.
+
+OSA/api/orders/{orderId}/items/{itemId}/remove-from-gift-wrap-options/
+Remove a specific item from the gift wrap options tracking.
+
+OSA/api/orders/{orderId}/items/{itemId}/remove-from-store-credit-status/
+Remove a specific item from the store credit status tracking.
+
+OSA/api/orders/{orderId}/items/{itemId}/remove-from-insurance-status/
+Remove a specific item from the insurance status tracking.
+
+OSA/api/orders/{orderId}/items/{itemId}/remove-from-payment-split-status/
+Remove a specific item from the payment split status tracking.
+
+OSA/api/orders/{orderId}/items/{itemId}/remove-from-dispute-status/
+Remove a specific item from the dispute status tracking.
+
+OSA/api/orders/{orderId}/items/{itemId}/remove-from-pre-order-status/
+Remove a specific item from the pre-order status tracking.
+
+OSA/api/orders/{orderId}/items/{itemId}/remove-from-grocery-status/
+Remove a specific item from the grocery status tracking.
+
+OSA/api/orders/{orderId}/items/{itemId}/remove-from-music-playlist-status/
+Remove a specific item from the music playlist status tracking.
+
+OSA/api/orders/{orderId}/items/{itemId}/remove-from-availability-status/
+Remove a specific item from the availability status tracking.
+
+OSA/api/orders/{orderId}/items/{itemId}/remove-from-wearable-tech-status/
+Remove a specific item from the wearable tech status tracking.
+
+OSA/api/orders/{orderId}/items/{itemId}/remove-from-promotion-status/
+Remove a specific item from the promotion status tracking.
+
+OSA/api/orders/{orderId}/items/{itemId}/remove-from-discount-history/
+Remove a specific item from the discount history tracking.
+
+OSA/api/orders/{orderId}/items/{itemId}/remove-from-loyalty-points-status/
+Remove a specific item from the loyalty points status tracking.
+
+-----------------------------------------------------------------------------------------------
+
+----- Entity -----
+
+Order Entity
+    private String orderId;
+    private List<OrderItem> items;
+    private PaymentDetails paymentDetails;
+    private ShippingDetails shippingDetails;
+    private BillingDetails billingDetails;
+    private OrderStatus status;
+    private List<OrderHistory> history;
+    private List<ProductReview> reviews;
+
+Order Item Entity
+    private String itemId;
+    private Product product;
+    private int quantity;
+    private ItemStatus status;
+    private List<ReturnDetails> returnDetails;
+    private List<ExchangeDetails> exchangeDetails;
+
+Payment Details Entity
+    private String paymentId;
+    private PaymentMethod paymentMethod;
+    private PaymentStatus status;
+    private List<PaymentSplitDetails> splitDetails;
+ 
+Shipping Details Entity
+    private String address;
+    private String method;
+    private String trackingNumber;
+    private ShipmentStatus status;
+    private List<ShipmentHistory> history;
+
+Billing Details Entity
+    private String address;
+    private PaymentMethod billingMethod;
+
+Order History Entity
+    private String timestamp;
+    private OrderStatus previousStatus;
+    private OrderStatus newStatus;
+    private String description;
+
+Product Review Entity
+    private String reviewId;
+    private String productId;
+    private String userId;
+    private String text;
+    private int rating;
+
+Discount Entity
+    private String discountCode;
+    private double amount;
+    private DiscountType type;
+
+Promotion Entity
+    private String promotionCode;
+    private String description;
+    private double discountPercentage;
+    private boolean active;
+
+Dispute Entity
+    private String disputeId;
+    private String orderId;
+    private String userId;
+    private String reason;
+    private DisputeStatus status;
+
+Loyalty Points Entity
+    private String userId;
+    private int points;
+
+Store Credit Entity
+    private String userId;
+    private double amount;
+
+Insurance Details Entity
+    private String itemId;
+    private boolean included;
+    private double cost;
+
+Payment Split Details Entity
+    private String itemId;
+    private String userId;
+    private double amount;
+
+Gift Details Entity
+    private String itemId;
+    private String recipientName;
+    private String recipientEmail;
+
+Wishlist Details Entity
+    private String itemId;
+    private String userId;
+    private boolean added;
