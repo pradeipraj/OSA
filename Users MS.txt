@@ -1,0 +1,960 @@
+----- Users MS -----
+
+----- POST -----
+
+OSA/api/users/signup/
+Create a new user account.
+
+OSA/api/users/login/
+Authenticate and log in a user.
+
+OSA/api/users/logout/
+Log out the currently authenticated user.
+
+OSA/api/users/forgot-password/
+Initiate the password recovery process.
+
+OSA/api/users/reset-password/
+Reset the password for a user after recovery.
+
+OSA/api/users/{userId}/change-password/
+Change the password for a specific user.
+
+OSA/api/users/{userId}/update-profile/
+Update the profile information for a user.
+
+OSA/api/users/{userId}/addresses/
+Add a new address for a user.
+
+OSA/api/users/{userId}/payment-methods/
+Add a new payment method for a user.
+
+OSA/api/users/{userId}/wishlist/
+Add a product to the user's wishlist.
+
+OSA/api/users/{userId}/cart/
+Add a product to the user's shopping cart.
+
+OSA/api/users/{userId}/orders/
+Place a new order on behalf of the user.
+
+OSA/api/users/{userId}/reviews/
+Add a product review as the user.
+
+OSA/api/users/{userId}/subscriptions/
+Subscribe the user to a newsletter or updates.
+
+OSA/api/users/{userId}/notifications/
+Subscribe the user to specific notifications.
+
+OSA/api/users/{userId}/follow/{followedUserId}/
+Follow another user.
+
+OSA/api/users/{userId}/unfollow/{followedUserId}/
+Unfollow another user.
+
+OSA/api/users/{userId}/report/{reportedUserId}/
+Report another user for inappropriate behavior.
+
+OSA/api/users/{userId}/favorites/
+Add a product or seller to the user's favorites list.
+
+OSA/api/users/{userId}/preferences/
+Set user preferences for personalized recommendations.
+
+OSA/api/users/{userId}/history/
+Log user activity or interactions for analytics.
+
+OSA/api/users/{userId}/feedback/
+Submit feedback or suggestions to the platform.
+
+OSA/api/users/admin/create/
+Create a new admin user (for administrative purposes).
+
+OSA/api/users/{userId}/contact-support/
+Initiate a support request on behalf of the user.
+
+OSA/api/users/{userId}/deactivate/
+Deactivate or suspend a user account.
+
+OSA/api/users/{userId}/ratings/
+Submit a rating for a product or seller.
+
+OSA/api/users/{userId}/recommendations/
+Get personalized product recommendations for the user.
+
+OSA/api/users/{userId}/wishlists/{wishlistId}/add-product/
+Add a product to a specific wishlist.
+
+OSA/api/users/{userId}/wishlists/{wishlistId}/remove-product/
+Remove a product from a specific wishlist.
+
+OSA/api/users/{userId}/cart/{cartItemId}/update-quantity/
+Update the quantity of a product in the user's shopping cart.
+
+OSA/api/users/{userId}/cart/{cartItemId}/remove-product/
+Remove a product from the user's shopping cart.
+
+OSA/api/users/{userId}/cart/checkout/
+Initiate the checkout process for the user's shopping cart.
+
+OSA/api/users/{userId}/cart/{orderId}/confirm-payment/
+Confirm payment for an order in the user's shopping cart.
+
+OSA/api/users/{userId}/orders/{orderId}/cancel/
+Cancel a placed order.
+
+OSA/api/users/{userId}/reviews/{productId}/update/
+Update a product review written by the user.
+
+OSA/api/users/{userId}/notifications/{notificationId}/mark-as-read/
+Mark a specific notification as read.
+
+OSA/api/users/{userId}/notifications/clear-all/
+Clear all notifications for the user.
+
+OSA/api/users/{userId}/subscriptions/{subscriptionId}/unsubscribe/
+Unsubscribe the user from a specific subscription.
+
+POSTusers/{userId}/subscriptions/new-subscriber/
+Notify the user about being a new subscriber.
+
+OSA/api/users/{userId}/block/{blockedUserId}/
+Block another user to prevent interactions.
+
+OSA/api/users/{userId}/unblock/{unblockedUserId}/
+Unblock a previously blocked user.
+
+OSA/api/users/{userId}/settings/update/
+Update user-specific settings and preferences.
+
+OSA/api/users/{userId}/invite-friends/
+Send invitations to friends to join the platform.
+
+OSA/api/users/{userId}/social-login/
+Allow users to sign up or log in using social media accounts.
+
+OSA/api/users/{userId}/report-issue/
+Allow users to report technical issues or bugs.
+
+OSA/api/users/{userId}/add-to-history/
+Add a product or page view to the user's browsing history.
+
+OSA/api/users/{userId}/share/{sharedUserId}/
+Share content or product recommendations with another user.
+
+OSA/api/users/{userId}/validate-promo-code/
+Validate a promotional code for the user's order.
+
+OSA/api/users/{userId}/rewards/redeem/
+Redeem loyalty rewards or points.
+
+OSA/api/users/{userId}/follow-brand/{brandId}/
+Follow a specific brand for updates and promotions.
+
+-------------------------------------------------------------------
+
+----- PUT -----
+
+OSA/api/users/{userId}/update-profile/
+Update the profile information for a user.
+
+OSA/api/users/{userId}/change-password/
+Change the password for a user.
+
+OSA/api/users/{userId}/addresses/{addressId}/
+Update details for a specific address of a user.
+
+OSA/api/users/{userId}/payment-methods/{paymentMethodId}/
+Update details for a specific payment method of a user.
+
+OSA/api/users/{userId}/wishlist/{wishlistId}/rename/
+Rename a user's wishlist.
+
+OSA/api/users/{userId}/wishlist/{wishlistId}/reorder/
+Reorder items in a user's wishlist.
+
+OSA/api/users/{userId}/cart/{cartItemId}/update-quantity/
+Update the quantity of a product in the user's shopping cart.
+
+OSA/api/users/{userId}/cart/clear/
+Clear the entire contents of the user's shopping cart.
+
+OSA/api/users/{userId}/orders/{orderId}/cancel/
+Cancel a placed order.
+
+OSA/api/users/{userId}/reviews/{reviewId}/update/
+Update a product review written by the user.
+
+OSA/api/users/{userId}/notifications/{notificationId}/mark-as-read/
+Mark a specific notification as read.
+
+OSA/api/users/{userId}/notifications/mark-all-as-read/
+Mark all notifications as read for the user.
+
+OSA/api/users/{userId}/subscriptions/{subscriptionId}/update/
+Update subscription preferences for the user.
+
+OSA/api/users/{userId}/block/{blockedUserId}/unblock/
+Unblock a previously blocked user.
+
+OSA/api/users/{userId}/settings/{settingId}/toggle/
+Toggle specific user settings.
+
+OSA/api/users/{userId}/update-preferences/
+Update general preferences for the user.
+
+OSA/api/users/{userId}/orders/{orderId}/track/
+Track the shipping status of an order.
+
+OSA/api/users/{userId}/reviews/{reviewId}/like/
+Like or unlike a product review.
+
+OSA/api/users/{userId}/reviews/{reviewId}/report/
+Report a product review for inappropriate content.
+
+OSA/api/users/{userId}/history/{historyId}/remove/
+Remove an item from the user's browsing history.
+
+OSA/api/users/{userId}/history/clear-all/
+Clear the entire browsing history for the user.
+
+OSA/api/users/{userId}/notifications/{notificationId}/mark-as-unread/
+Mark a specific notification as unread.
+
+OSA/api/users/{userId}/subscriptions/{subscriptionId}/resubscribe/
+Resubscribe the user to a previously unsubscribed service.
+
+OSA/api/users/{userId}/preferences/update/
+Update user preferences for personalized recommendations.
+
+OSA/api/users/{userId}/social-links/
+Update or add social media links to the user's profile.
+
+OSA/api/users/{userId}/wishlist/{wishlistId}/add-product/
+Add a product to a user's wishlist.
+
+OSA/api/users/{userId}/wishlist/{wishlistId}/remove-product/
+Remove a product from a user's wishlist.
+
+OSA/api/users/{userId}/cart/{cartItemId}/remove-product/
+Remove a product from the user's shopping cart.
+
+OSA/api/users/{userId}/cart/{cartItemId}/move-to-wishlist/
+Move a product from the cart to the user's wishlist.
+
+OSA/api/users/{userId}/orders/{orderId}/return/
+Initiate a return process for a specific order.
+
+OSA/api/users/{userId}/orders/{orderId}/rate/
+Rate and provide feedback on a past order.
+
+OSA/api/users/{userId}/reviews/{reviewId}/delete/
+Delete a product review written by the user.
+
+OSA/api/users/{userId}/notifications/{notificationId}/update/
+Update the content or details of a notification.
+
+OSA/api/users/{userId}/subscriptions/{subscriptionId}/pause/
+Pause a specific subscription for the user.
+
+OSA/api/users/{userId}/subscriptions/{subscriptionId}/resume/
+Resume a paused subscription for the user.
+
+OSA/api/users/{userId}/subscriptions/{subscriptionId}/modify/
+Modify the details of a user's subscription.
+
+OSA/api/users/{userId}/block/{blockedUserId}/report/
+Report a blocked user for inappropriate behavior.
+
+OSA/api/users/{userId}/unblock/{unblockedUserId}/add-to-favorites/
+Add a previously blocked user to the user's favorites.
+
+OSA/api/users/{userId}/settings/{settingId}/update/
+Update specific settings for the user.
+
+OSA/api/users/{userId}/orders/{orderId}/confirm-reception/
+Confirm the reception of a delivered order.
+
+OSA/api/users/{userId}/reviews/{reviewId}/report-abuse/
+Report a product review for abusive content.
+
+OSA/api/users/{userId}/notifications/{notificationId}/mark-as-important/
+Mark a specific notification as important.
+
+OSA/api/users/{userId}/subscriptions/{subscriptionId}/unsubscribe-temporarily/
+Temporarily unsubscribe the user from a service.
+
+OSA/api/users/{userId}/preferences/reset-to-default/
+Reset user preferences to default settings.
+
+OSA/api/users/{userId}/password-expiration/update/
+Update the expiration date for the user's password.
+
+OSA/api/users/{userId}/contacts/{contactId}/update/
+Update details for a specific contact in the user's address book.
+
+OSA/api/users/{userId}/contacts/{contactId}/delete/
+Delete a specific contact from the user's address book.
+
+OSA/api/users/{userId}/wishlist/clear/
+Clear all items from the user's wishlist.
+
+OSA/api/users/{userId}/cart/{cartItemId}/apply-promo-code/
+Apply a promotional code to the user's shopping cart.
+
+OSA/api/users/{userId}/notifications/{notificationId}/mark-as-not-important/
+Remove the importance status from a specific notification.
+
+---------------------------------------------------------------------------------------------
+
+----- GET -----
+
+OSA/api/users/{userId}/profile/
+Retrieve the profile information for a specific user.
+
+OSA/api/users/{userId}/addresses/
+Get the list of addresses associated with a user.
+
+OSA/api/users/{userId}/payment-methods/
+Get the list of payment methods saved by a user.
+
+OSA/api/users/{userId}/wishlist/
+Retrieve the user's wishlist.
+
+OSA/api/users/{userId}/cart/
+Retrieve the contents of the user's shopping cart.
+
+OSA/api/users/{userId}/orders/
+Get the list of orders placed by a user.
+
+OSA/api/users/{userId}/reviews/
+Retrieve product reviews written by the user.
+
+OSA/api/users/{userId}/notifications/
+Get the list of notifications for a user.
+
+OSA/api/users/{userId}/subscriptions/
+Get the user's subscription preferences.
+
+OSA/api/users/{userId}/history/
+Retrieve the browsing history for a user.
+
+OSA/api/users/{userId}/favorites/
+Get the user's list of favorite products or sellers.
+
+OSA/api/users/{userId}/recommendations/
+Get personalized product recommendations for the user.
+
+OSA/api/users/{userId}/block-list/
+Retrieve the list of users blocked by the current user.
+
+OSA/api/users/{userId}/settings/
+Get the user's account settings and preferences.
+
+OSA/api/users/{userId}/contacts/
+Retrieve the user's address book or contact list.
+
+OSA/api/users/{userId}/orders/{orderId}/
+Get details of a specific order for the user.
+
+OSA/api/users/{userId}/reviews/{reviewId}/
+Retrieve details of a specific product review written by the user.
+
+OSA/api/users/{userId}/notifications/{notificationId}/
+Get details of a specific notification for the user.
+
+OSA/api/users/{userId}/subscriptions/{subscriptionId}/
+Get details of a specific subscription for the user.
+
+OSA/api/users/{userId}/wishlist/{wishlistId}/
+Get details of a specific wishlist for the user.
+
+OSA/api/users/{userId}/cart/{cartItemId}/
+Get details of a specific item in the user's shopping cart.
+
+OSA/api/users/{userId}/recommended-products/
+Get a list of products recommended for the user.
+
+OSA/api/users/{userId}/recent-orders/
+Retrieve the most recent orders for the user.
+
+OSA/api/users/{userId}/loyalty-points/
+Get the user's current loyalty points balance.
+
+OSA/api/users/{userId}/social-profile/
+Retrieve the user's social media profile information.
+
+OSA/api/users/
+Retrieve a list of all users (admin access).
+
+OSA/api/users/{userId}/order-history/
+Get the complete order history for a user.
+
+OSA/api/users/{userId}/reviews/{productId}/
+Retrieve all reviews written by the user for a specific product.
+
+OSA/api/users/{userId}/notifications/unread/
+Retrieve unread notifications for a user.
+
+OSA/api/users/{userId}/wishlist/{wishlistId}/products/
+Get the list of products in a specific wishlist.
+
+OSA/api/users/{userId}/cart/total/
+Get the total price of the items in the user's shopping cart.
+
+OSA/api/users/{userId}/subscriptions/all/
+Retrieve all subscription details for a user.
+
+OSA/api/users/{userId}/history/{productId}/view-count/
+Get the view count for a specific product in the user's history.
+
+OSA/api/users/{userId}/favorites/sellers/
+Retrieve the list of favorite sellers for a user.
+
+OSA/api/users/{userId}/notifications/important/
+Get important notifications for a user.
+
+OSA/api/users/{userId}/recently-viewed/
+Retrieve the list of recently viewed products by a user.
+
+OSA/api/users/{userId}/recommendations/popular/
+Get popular product recommendations for the user.
+
+OSA/api/users/{userId}/block-list-details/
+Retrieve details of users blocked by the current user.
+
+OSA/api/users/{userId}/settings/security/
+Get the security settings for the user's account.
+
+OSA/api/users/{userId}/contacts/{contactId}/
+Retrieve details of a specific contact in the user's address book.
+
+OSA/api/users/{userId}/orders/{orderId}/tracking/
+Get real-time tracking information for a specific order.
+
+OSA/api/users/{userId}/reviews/{reviewId}/comments/
+Retrieve comments on a specific review written by the user.
+
+OSA/api/users/{userId}/notifications/{notificationId}/details/
+Get detailed information about a specific notification.
+
+OSA/api/users/{userId}/subscriptions/{subscriptionId}/status/
+Check the current status of a specific subscription.
+
+OSA/api/users/{userId}/wishlist/{wishlistId}/meta/
+Get metadata about a specific wishlist.
+
+OSA/api/users/{userId}/cart/{cartItemId}/details/
+Get detailed information about a specific item in the user's shopping cart.
+
+OSA/api/users/{userId}/recommended-brands/
+Get a list of recommended brands for the user.
+
+OSA/api/users/{userId}/loyalty-points/history/
+Retrieve the history of loyalty points transactions for the user.
+
+OSA/api/users/{userId}/social-profile/{socialPlatform}/
+Retrieve specific social media profile information for the user.
+
+OSA/api/users/{userId}/notifications/{notificationId}/context/
+Get contextual information related to a specific notification.
+
+OSA/api/users/{userId}/orders/{orderId}/items/
+Get the list of items in a specific order for a user.
+
+OSA/api/users/{userId}/reviews/most-liked/
+Retrieve the most liked reviews written by the user.
+
+OSA/api/users/{userId}/notifications/{notificationId}/related-items/
+Get related items or products associated with a specific notification.
+
+OSA/api/users/{userId}/wishlist/{wishlistId}/recommendations/
+Get product recommendations based on the items in a specific wishlist.
+
+OSA/api/users/{userId}/cart/{cartItemId}/product-details/
+Get detailed information about a specific product in the user's shopping cart.
+
+OSA/api/users/{userId}/recommendations/trending/
+Get trending product recommendations for the user.
+
+OSA/api/users/{userId}/history/top-categories/
+Retrieve the top product categories viewed by the user.
+
+OSA/api/users/{userId}/favorites/products/
+Retrieve the list of favorite products for a user.
+
+OSA/api/users/{userId}/recommendations/similar-users/
+Get product recommendations based on the preferences of similar users.
+
+OSA/api/users/{userId}/cart/discount-details/
+Get details about available discounts or promotions for items in the user's shopping cart.
+
+OSA/api/users/{userId}/subscriptions/active/
+Retrieve active subscriptions for a user.
+
+OSA/api/users/{userId}/notifications/{notificationId}/related-orders/
+Get information about orders related to a specific notification.
+
+OSA/api/users/{userId}/wishlist/{wishlistId}/stats/
+Get statistics or analytics about a specific wishlist for a user.
+
+OSA/api/users/{userId}/cart/estimated-total/
+Get the estimated total price of the items in the user's shopping cart.
+
+OSA/api/users/{userId}/reviews/{reviewId}/related-reviews/
+Get reviews related to a specific product review written by the user.
+
+OSA/api/users/{userId}/notifications/unread-count/
+Get the count of unread notifications for a user.
+
+OSA/api/users/{userId}/wishlist/{wishlistId}/product-count/
+Get the count of products in a specific wishlist for a user.
+
+OSA/api/users/{userId}/cart/unique-products-count/
+Get the count of unique products in the user's shopping cart.
+
+OSA/api/users/{userId}/subscriptions/inactive/
+Retrieve inactive or canceled subscriptions for a user.
+
+OSA/api/users/{userId}/recommendations/new-arrivals/
+Get recommendations for new arrivals based on the user's preferences.
+
+OSA/api/users/{userId}/notifications/{notificationId}/timestamp/
+Get the timestamp or time of a specific notification.
+
+OSA/api/users/{userId}/cart/{cartItemId}/promotion-details/
+Get details about promotions applied to a specific item in the user's shopping cart.
+
+OSA/api/users/{userId}/history/popular-products/
+Retrieve popular products based on the user's browsing history.
+
+OSA/api/users/{userId}/reviews/{reviewId}/ratings/
+Get ratings associated with a specific product review written by the user.
+
+OSA/api/users/{userId}/recommended-categories/
+Get recommended product categories based on the user's preferences.
+
+------------------------------------------------------------------------------------------------------
+
+----- DELETE -----
+
+DELETE/users/{userId}/address/{addressId}/
+Delete a specific address from the user's address book.
+
+DELETE/users/{userId}/payment-method/{paymentMethodId}/R
+emove a specific payment method from the user's account.
+
+DELETE/users/{userId}/wishlist/{wishlistId}/
+Delete a specific wishlist.
+
+DELETE/users/{userId}/wishlist/{wishlistId}/product/{productId}/
+Remove a specific product from a wishlist.
+
+DELETE/users/{userId}/cart/{cartItemId}/
+Remove a specific item from the user's shopping cart.
+
+DELETE/users/{userId}/orders/{orderId}/
+Cancel and delete a specific order.
+
+DELETE/users/{userId}/reviews/{reviewId}/
+Delete a specific product review written by the user.
+
+DELETE/users/{userId}/notifications/{notificationId}/
+Delete a specific notification.
+
+DELETE/users/{userId}/subscriptions/{subscriptionId}/
+Unsubscribe and delete a specific subscription.
+
+DELETE/users/{userId}/block/{blockedUserId}/
+Unblock a previously blocked user.
+
+DELETE/users/{userId}/settings/{settingId}/
+Reset a specific setting to its default value.
+
+DELETE/users/{userId}/contacts/{contactId}/
+Delete a specific contact from the user's address book.
+
+DELETE/users/{userId}/history/{productId}/
+Remove a specific product from the user's browsing history.
+
+DELETE/users/{userId}/favorites/{productId}/
+Remove a specific product from the user's list of favorites.
+
+DELETE/users/{userId}/recommendations/{productId}/
+Remove a specific product from the user's personalized recommendations.
+
+DELETE/users/{userId}/cart/clear/
+Clear the entire contents of the user's shopping cart.
+
+DELETE/users/{userId}/notifications/clear-all/
+Clear all notifications for the user.
+
+DELETE/users/{userId}/subscriptions/cancel-all/
+Cancel all subscriptions for the user.
+
+DELETE/users/{userId}/block-list/clear/
+Clear the entire block list for the user.
+
+DELETE/users/{userId}/history/clear-all/
+Clear the entire browsing history for the user.
+
+DELETE/users/{userId}/reviews/clear-all/
+Delete all product reviews written by the user.
+
+DELETE/users/{userId}/favorites/clear/
+Clear the entire list of favorite products for the user.
+
+DELETE/users/{userId}/recommendations/clear/
+Clear the entire list of personalized recommendations for the user.
+
+DELETE/users/{userId}/cart/remove-promo-code/
+Remove a promotional code from the user's shopping cart.
+
+DELETE/users/{userId}/social-links/remove/
+Remove social media links from the user's profile.
+
+DELETE/users/{userId}/orders/{orderId}/item/{productId}/
+Remove a specific item from a placed order.
+
+DELETE/users/{userId}/reviews/{reviewId}/comments/
+Delete all comments on a specific product review.
+
+DELETE/users/{userId}/wishlist/clear/
+Clear all wishlists for the user.
+
+DELETE/users/{userId}/cart/{cartItemId}/apply-promo-code/
+Remove a promotional code applied to a specific item in the cart.
+
+DELETE/users/{userId}/notifications/{notificationId}/mark-as-important/
+Remove the importance status from a specific notification.
+
+DELETE/users/{userId}/subscriptions/{subscriptionId}/unsubscribe-temporarily/
+Unsubscribe the user temporarily from a specific service.
+
+DELETE/users/{userId}/preferences/reset-to-default/
+Reset user preferences to default settings.
+
+DELETE/users/{userId}/password-expiration/update/
+Remove or extend the expiration date for the user's password.
+
+DELETE/users/{userId}/contacts/clear/
+Clear the entire address book or contact list for the user.
+
+DELETE/users/{userId}/wishlist/{wishlistId}/remove-all/
+Remove all products from a specific wishlist.
+
+DELETE/users/{userId}/cart/{cartItemId}/remove-all/
+Remove all items from the user's shopping cart.
+
+DELETE/users/{userId}/orders/{orderId}/cancel-all/
+Cancel all orders placed by the user.
+
+DELETE/users/{userId}/reviews/{reviewId}/like/
+Remove the like status from a specific product review.
+
+DELETE/users/{userId}/reviews/{reviewId}/report-abuse/
+Remove the abuse report for a specific product review.
+
+DELETE/users/{userId}/notifications/{notificationId}/mark-as-not-important/
+Remove the not-important status from a specific notification.
+
+DELETE/users/{userId}/subscriptions/{subscriptionId}/resubscribe/
+Resubscribe the user to a previously unsubscribed service.
+
+DELETE/users/{userId}/preferences/update/
+Remove specific user preferences.
+
+DELETE/users/{userId}/contacts/{contactId}/delete/
+Delete a specific contact from the user's address book.
+
+DELETE/users/{userId}/wishlist/{wishlistId}/product/{productId}/unlike/
+Remove the like status from a specific product in a wishlist.
+
+DELETE/users/{userId}/cart/{cartItemId}/remove-promo-code/
+Remove a promotional code from a specific item in the user's shopping cart.
+
+DELETE/users/{userId}/notifications/{notificationId}/mark-as-read/
+Remove the read status from a specific notification.
+
+DELETE/users/{userId}/subscriptions/{subscriptionId}/update/
+Remove specific details from a user's subscription.
+
+DELETE/users/{userId}/wishlist/{wishlistId}/meta/
+Remove metadata from a specific wishlist.
+
+DELETE/users/{userId}/cart/{cartItemId}/promotion-details/
+Remove details about promotions applied to a specific item in the user's shopping cart.
+
+DELETE/users/{userId}/history/popular-products/
+Remove popular products from the user's browsing history.
+
+DELETE/users/{userId}/history/{productId}/clear/
+Remove a specific product from the user's browsing history.
+
+DELETE/users/{userId}/favorites/sellers/{sellerId}/
+Remove a specific seller from the user's list of favorite sellers.
+
+DELETE/users/{userId}/recommendations/similar-users/{similarUserId}/
+Remove a similar user from the list used for recommendations.
+
+DELETE/users/{userId}/wishlist/{wishlistId}/clear/
+Clear all products from a specific wishlist.
+
+DELETE/users/{userId}/cart/{cartItemId}/discount-details/
+Remove details about discounts applied to a specific item in the user's shopping cart.
+
+DELETE/users/{userId}/notifications/{notificationId}/related-items/
+Remove related items associated with a specific notification.
+
+DELETE/users/{userId}/wishlist/{wishlistId}/recommendations/
+Clear product recommendations based on the items in a specific wishlist.
+
+DELETE/users/{userId}/cart/{cartItemId}/related-items/
+Remove related items associated with a specific item in the user's shopping cart.
+
+DELETE/users/{userId}/history/{productId}/remove-from-favorites/
+Remove a specific product from the user's list of favorite products.
+
+DELETE/users/{userId}/favorites/{productId}/clear/
+Remove a specific product from the user's list of favorite products.
+
+DELETE/users/{userId}/reviews/{reviewId}/ratings/{ratingId}/
+Remove a specific rating associated with a product review.
+
+DELETE/users/{userId}/social-profile/{socialPlatform}/
+Remove social media profile information for a specific platform.
+
+DELETE/users/{userId}/block/{blockedUserId}/remove-from-favorites/
+Remove a previously blocked user from the user's list of favorite users.
+
+DELETE/users/{userId}/contacts/clear-all/
+Clear the entire address book or contact list for the user.
+
+DELETE/users/{userId}/wishlist/{wishlistId}/move-to-cart/
+Remove items from a wishlist and add them to the user's shopping cart.
+
+DELETE/users/{userId}/wishlist/{wishlistId}/recommendations/clear/
+Clear product recommendations based on the items in a specific wishlist.
+
+DELETE/users/{userId}/reviews/{reviewId}/comments/clear/
+Remove all comments on a specific product review.
+
+DELETE/users/{userId}/cart/{cartItemId}/remove-all-promo-codes/
+Remove all promotional codes applied to a specific item in the user's shopping cart.
+
+DELETE/users/{userId}/orders/{orderId}/items/cancel/
+Remove all items from a specific order.
+
+DELETE/users/{userId}/reviews/{reviewId}/ratings/clear/
+Remove all ratings associated with a product review.
+
+DELETE/users/{userId}/notifications/{notificationId}/related-orders/
+Remove information about orders related to a specific notification.
+
+DELETE/users/{userId}/wishlist/{wishlistId}/stats/clear/
+Clear statistics or analytics about a specific wishlist.
+
+DELETE/users/{userId}/cart/{cartItemId}/promotion-details/clear/
+Remove details about promotions applied to a specific item in the user's shopping cart.
+
+DELETE/users/{userId}/reviews/{reviewId}/related-reviews/clear/
+Remove all related reviews to a specific product review written by the user.
+
+DELETE/users/{userId}/recommended-categories/clear/
+Clear recommended product categories based on the user's preferences.
+
+DELETE/users/{userId}/reviews/{reviewId}/report/
+Remove the abuse report for a specific product review.
+
+DELETE/users/{userId}/notifications/important/clear/
+Clear important notifications for a user.
+
+DELETE/users/{userId}/recently-viewed/clear/
+Clear the list of recently viewed products by a user.
+
+DELETE/users/{userId}/recommendations/popular/clear/
+Clear popular product recommendations for the user.
+
+DELETE/users/{userId}/block-list-details/clear/
+Clear details of users blocked by the current user.
+
+DELETE/users/{userId}/settings/security/reset/
+Reset security settings for the user's account.
+
+DELETE/users/{userId}/contacts/{contactId}/delete/clear/
+Delete a specific contact from the user's address book and clear details.
+
+DELETE/users/{userId}/contacts/{contactId}/clear/
+Clear details of a specific contact in the user's address book.
+
+DELETE/users/{userId}/wishlist/{wishlistId}/product/{productId}/unlike/clear/
+Clear the like status from a specific product in a wishlist.
+
+DELETE/users/{userId}/cart/{cartItemId}/remove-promo-code/clear/
+Clear details about promotions applied to a specific item in the user's shopping cart.
+
+DELETE/users/{userId}/notifications/{notificationId}/mark-as-read/clear/
+Clear the read status from a specific notification.
+
+DELETE/users/{userId}/subscriptions/{subscriptionId}/update/clear/
+Clear specific details from a user's subscription.
+
+DELETE/users/{userId}/wishlist/{wishlistId}/meta/clear/
+Clear metadata from a specific wishlist.
+
+DELETE/users/{userId}/cart/{cartItemId}/promotion-details/clear/
+Clear details about promotions applied to a specific item in the user's shopping cart.
+
+DELETE/users/{userId}/history/popular-products/clear/
+Clear popular products from the user's browsing history.
+
+DELETE/users/{userId}/reviews/{reviewId}/ratings/clear/
+Clear ratings associated with a specific product review written by the user.
+
+DELETE/users/{userId}/recommended-categories/clear/
+Clear recommended product categories based on the user's preferences.
+
+DELETE/users/{userId}/orders/{orderId}/items/cancel/clear/
+Remove all items from a specific order and clear details.
+
+DELETE/users/{userId}/reviews/{reviewId}/related-reviews/clear/
+Clear all related reviews to a specific product review written by the user.
+
+DELETE/users/{userId}/notifications/{notificationId}/related-items/clear/
+Clear related items associated with a specific notification.
+
+DELETE/users/{userId}/wishlist/{wishlistId}/clear/clear/
+Clear all products from a specific wishlist and clear details.
+
+DELETE/users/{userId}/wishlist/{wishlistId}/recommendations/clear/clear/
+Clear product recommendations based on the items in a specific wishlist and clear details.
+
+DELETE/users/{userId}/cart/{cartItemId}/related-items/clear/
+Clear related items associated with a specific item in the user's shopping cart.
+
+DELETE/users/{userId}/history/{productId}/remove-from-favorites/clear/
+Remove a specific product from the user's list of favorite products and clear details.
+
+DELETE/users/{userId}/favorites/{productId}/clear/clear/
+Remove a specific product from the user's list of favorite products and clear details.
+
+
+-----------------------------------------------------------------------------------------------------------------------------
+
+----- Entity -----
+
+User Entity:
+	userId; 
+	username; 
+	email; 
+	password; 
+	firstName; 
+	lastName; 
+	createdAt; 
+	updatedAt;
+
+Address Entity:
+	addressId;
+	userId;
+	street; 
+	city;
+	state;
+	zipcode; 
+	country;
+
+Payment Method Entity:
+	paymentMethodId; 
+	userId; 
+	cardNumber; 
+	expirationDate; 
+	cvv; 
+	billingAddress;
+
+Wishlist Entity:
+	wishlistId; 
+	userId; 
+	name; 
+	createdAt; 
+	updatedAt;
+
+CartItem Entity:
+	cartItemId; 
+	userId; 
+	productId; 
+	quantity; 
+	createdAt; 
+	updatedAt;
+
+Order Entity:
+	orderId; 
+	userId; 
+	orderItems; 
+	status; 
+	totalAmount; 
+	createdAt; 
+	updatedAt;
+
+Review Entity:
+	reviewId; 
+	userId; 
+	productId; 
+	rating; 
+	title; 
+	comment; 
+	createdAt; 
+	updatedAt;
+
+Notification Entity:
+	notificationId; 
+	userId; 
+	message; 
+	type; 
+	isRead; 
+	createdAt; 
+	updatedAt;
+
+Subscription Entity:
+	subscriptionId; 
+	userId; 
+	serviceType; 
+	status; 
+	startDate; 
+	endDate; 
+	createdAt; 
+	updatedAt;
+
+History Item Entity:
+	historyItemId; 
+	userId; 
+	productId; 
+	viewCount; 
+	lastViewedAt;
+
+Favorite Entity:
+	favoriteId; 
+	userId; 
+	productId; 
+	favoritedAt;
+
+Social Profile Entity:
+	socialProfileId; 
+	userId; 
+	platform; 
+	profileLink; 
+	createdAt; 
+	updatedAt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
