@@ -1,0 +1,58 @@
+TECHNICAL DESIGN PAGE USER MICROSERVICE...
+
+OVERVIEW:
+The User Microservice is responsible for managing user-related functionalities, 
+including authentication, authorization, user profiles, and preferences.
+
+ARCHITECTURE:
+Programming Language: Java (Which Version?)
+Framework: Spring Boot (Java)
+Database: MySQL/AWS
+Authentication: OAuth 2.0 for secure authentication.
+
+HIGH-LEVEL ARCHITECTURE:
+RESTful API endpoints for communication. 
+It interacts with other microservices such as the Stock Microservice, 
+Order Microservice, and Authentication Microservice.
+
+FUNCTIONALITY:
+	1. User Registration and Authentication:
+		Endpoint: osa/api/users/register (POST): Allows users to create an account.
+		Endpoint: osa/api/users/login (POST): Authenticates users and generates a JWT token for subsequent requests.
+
+	2. User Profile:
+		Endpoint: osa/api/users/{userId} (GET): Retrieves user profile information.
+		Endpoint: osa/api/users/{userId} (PUT): Allows users to update their profile information.
+
+AUTHORIZATION:
+	Implement role-based access control (RBAC) to manage user permissions.
+	Define roles such as User or Admin.
+
+SECURITY:
+	Implement HTTPS for secure communication.
+	Store passwords securely using industry-standard hashing algorithms like bcrypt.
+	Use JWT tokens for authentication and authorization.
+
+ERROR HANDLING:
+	Define clear error messages and status codes for API responses.
+	Log errors for debugging purposes.
+	
+TESTING: 
+	Implement unit testing with code coverage.
+	integration tests (if Required).
+	end-to-end tests to ensure the reliability and stability of the microservice.
+
+DOCUMENTATION:
+	Create comprehensive API documentation using tools like Swagger or OpenAPI.
+
+DEPLOYMENT:
+	Utilize continuous integration and continuous deployment (CI/CD) pipelines for automated testing and deployment.
+
+FUTURE CONSIDERATION:
+	Consider features like user notifications, password recovery.
+
+
+
+
+
+
