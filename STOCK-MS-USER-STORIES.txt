@@ -1,0 +1,359 @@
+1. As a stock manager, I want to add a new product to the stock, so that it is available for customers to purchase.
+	Acceptance criteria:
+	1. Provide fields for product name, description, category, price, and initial stock quantity.
+	2. Validate that all required information is provided.
+	3. Ensure that the product is successfully added to the stock with the specified quantity.
+	
+	TESTING STORY GROOMING:
+	a. Provide fields for product information:
+		Test Action: Verify that all the required fields (product name, description, category, price, and initial stock quantity) 
+		are present and correctly labeled on the form.
+
+	b. Validate the submission of the form with incomplete information:
+		Test Action: Attempt to submit the form with missing information in any of the required fields.
+		Expected Result: Ensure that an appropriate error message is displayed, indicating that all required information must be provided.
+
+	c. Validate the submission of the form with complete information:
+		Test Action: Enter valid information in all required fields and submit the form.
+		Expected Result: Ensure that the form is submitted successfully, and the product is added to the stock with the specified quantity.
+
+	d. Verify error messages for invalid input:
+		Test Action: Enter invalid data in different fields (e.g., text in the price field, negative stock quantity) and submit the form.
+		Expected Result: Ensure that appropriate error messages are displayed next to the respective fields, indicating the nature of the validation error.
+
+	e. Verify that product details are correctly stored in the database:
+		Test Action: Add a new product with valid information and retrieve the product from the database.
+		Expected Result: Ensure that the product details in the database match the information entered during the addition process.
+
+	f. Verify that the initial stock quantity is accurate:
+		Test Action: Add a new product with an initial stock quantity and check the stock to ensure that the initial quantity matches the specified value.
+		Expected Result: Ensure that the stock quantity for the new product is accurate, reflecting the specified initial quantity.
+
+	g. Verify the behavior when attempting to add a product with an existing name:
+		Test Action: Add a product with a specific name and attempt to add another product with the same name.
+		Expected Result: Ensure that an error message is displayed, indicating that a product with the same name already exists.
+
+	h. Verify that special characters and HTML tags are handled correctly:	
+		Test Action: Enter product information with special characters and HTML tags and submit the form.
+		Expected Result: Ensure that the system handles special characters and HTML tags correctly, 
+				 and the product is added without any display or security issues.
+
+2. As a stock manager, I want to update the stock quantity of a product, so that I can reflect changes in product availability.
+	Acceptance criteria:
+	1. Provide the ability to select a product and update its stock quantity.
+	2. Validate that the new stock quantity is a valid non-negative integer.
+	3. Ensure that the stock quantity is successfully updated.
+
+	TESTING STORY GROOMING:
+
+	a. Provide the ability to select a product and update its stock quantity:
+		Test Action: Access the interface for updating stock quantity.
+		Expected Result: Confirm that the interface displays a list of products with the option to update the stock quantity for each product.
+
+	b. Validate that the new stock quantity is a valid non-negative integer:
+		Test Action: Attempt to update the stock quantity with various inputs, including non-integer values, negative values, and valid positive integers.
+		Expected Result: Ensure that the system validates the input and displays appropriate error messages for invalid inputs. 
+				 The update should only proceed with a valid non-negative integer.
+
+	c. Ensure that the stock quantity is successfully updated:
+		Test Action: Update the stock quantity of a product with a valid non-negative integer.
+		Expected Result: Confirm that the stock quantity for the selected product is updated as per the input. Verify the update in the database.
+	
+	d. Verify the behavior when attempting to update stock quantity for a non-existing product:
+		Test Action: Attempt to update the stock quantity for a product that does not exist.
+		Expected Result: Ensure that an error message is displayed, indicating that the selected product is not found.
+
+	e. Verify the behavior when attempting to update stock quantity with an invalid product ID:
+		Test Action: Attempt to update the stock quantity with an invalid product ID (e.g., alphanumeric or special characters).
+		Expected Result: Ensure that the system handles invalid product IDs and displays an appropriate error message.
+
+	f. Verify that special characters and HTML tags in the stock quantity are handled correctly:
+		Test Action: Attempt to update the stock quantity with special characters and HTML tags.
+		Expected Result: Ensure that the system handles special characters and HTML tags in the stock quantity input appropriately, 
+				 displaying an error or handling it securely.
+
+	g. Verify that the update is reflected in the product availability:
+		Test Action: After updating the stock quantity, check the product availability on the frontend.
+		Expected Result: Confirm that the product availability is updated on the frontend, reflecting the changes made in the stock quantity.
+
+	h. Verify the update operation is logged for auditing purposes:
+		Test Action: Update the stock quantity for a product and check the audit log or history.
+		Expected Result: Ensure that the update operation is logged, capturing details such as timestamp, 
+				 old stock quantity, new stock quantity, and the user who performed the update.
+
+3. As a stock manager, I want to view the current stock levels of all products, so that I can monitor inventory.
+	Acceptance criteria:
+	1. Display a list of all products with their current stock quantities.
+	2. Ensure that the information is up-to-date and reflects the latest changes in stock.
+
+	TEST STORY GROOMING:
+
+	a. Display a list of all products with their current stock quantities:
+		Test Action: Navigate to the page or interface designed for viewing current stock levels.
+		Expected Result: Confirm that a comprehensive list of all products is displayed, each with its corresponding current stock quantity.
+
+	b. Ensure that the information is up-to-date and reflects the latest changes in stock:
+		Test Action: Perform stock-related operations such as adding new products, updating stock quantities, and removing products. 
+			     Then, revisit the page displaying current stock levels.
+		Expected Result: Verify that the displayed information is dynamically updated and accurately reflects the latest changes made to the stock.
+
+	c. Verify pagination or scrolling functionality for large product lists:
+		Test Action: Populate the system with a large number of products and confirm that the page accommodates pagination or 
+			     scrolling to handle the display of a substantial product list.
+		Expected Result: Ensure that the interface provides a user-friendly way to navigate through a large number of products.
+
+	d. Verify sorting functionality for the product list:
+		Test Action: Click on different headers (e.g., product name, stock quantity) to sort the product list in ascending and descending order.
+		Expected Result: Confirm that the sorting functionality works as expected, arranging the products based on the selected criteria.
+
+	e. Verify that product details are accurate in the displayed list:
+		Test Action: Cross-reference the information displayed for each product with the actual details stored in the database.
+		Expected Result: Ensure that the product names and current stock quantities match the information stored in the system.
+
+	f. Verify the behavior when there are no products in the stock:
+		Test Action: Remove all products from the stock and check the display.
+		Expected Result: Confirm that an appropriate message is displayed, indicating that there are no products in the stock.
+
+	g. Verify the responsiveness of the interface for different screen sizes:
+		Test Action: Access the page from devices with various screen sizes (desktop, tablet, mobile) and confirm that the interface is responsive.
+		Expected Result: Ensure that the page layout adapts appropriately to different screen sizes, maintaining usability and readability.
+
+	h. Verify the presence of filters or search functionality:
+		Test Action: Check if there are filters or a search bar to locate specific products quickly.
+		Expected Result: Confirm that the filters or search functionality work as expected, allowing the stock manager to find specific products efficiently.
+
+4. As a stock manager, I want to receive notifications when a product's stock falls below a specified threshold, so that I can take proactive measures to replenish the stock.	
+	Acceptance criteria:
+	1. Allow the setting of a threshold for each product.
+	2. Send notifications when the stock quantity of a product falls below the specified threshold.
+	3. Notifications can be sent via email, SMS, or any other preferred communication method.
+
+	TEST STORY GROOMING:
+
+	a. Allow the setting of a threshold for each product:
+		Test Action: Navigate to the page or interface for setting stock thresholds.
+		Expected Result: Confirm that there are fields or options to set a threshold for each product, and that the threshold can be adjusted as needed.
+
+	b. Verify the setting and updating of stock thresholds:
+		Test Action: Set different stock thresholds for various products and confirm that the changes are saved.
+		Expected Result: Ensure that the system accurately stores and updates the specified stock thresholds for each product.
+
+	c. Send notifications when the stock quantity of a product falls below the specified threshold:
+		Test Action: Simulate a scenario where the stock quantity of a product falls below the specified threshold.
+		Expected Result: Confirm that a notification is triggered and sent to the appropriate recipient (stock manager).
+
+	d. Verify the content of the notification messages:
+		Test Action: Receive notifications for low stock levels and inspect the content.
+		Expected Result: Ensure that the notifications contain relevant information, such as the product name, current stock quantity, and the specified threshold.
+
+	e. Confirm the timely delivery of notifications:
+		Test Action: Set a low stock threshold for a product and monitor the time it takes for the notification to be delivered.
+		Expected Result: Verify that notifications are sent promptly when the stock falls below the specified threshold.
+
+	f. Test the notification preferences:
+		Test Action: Set different notification preferences (e.g., email, SMS) for the stock manager and trigger low stock scenarios.
+		Expected Result: Confirm that notifications are delivered according to the selected preferences.
+
+	g. Verify the behavior when stock is replenished:
+		Test Action: Replenish the stock of a product that triggered a low stock notification.
+		Expected Result: Confirm that the system recognizes the stock replenishment and does not continue to send notifications for that product.
+
+	h. Test for multiple low stock scenarios simultaneously:
+		Test Action: Set low stock thresholds for multiple products and trigger low stock scenarios for each.
+		Expected Result: Confirm that notifications are sent for each product independently and accurately reflect the status of their stock levels.
+
+	i. Verify the option to disable notifications temporarily:
+		Test Action: Disable notifications temporarily and trigger low stock scenarios.
+		Expected Result: Confirm that notifications are not sent during the specified period when notifications are temporarily disabled.
+
+	j. Verify the option to enable or modify notification preferences:
+		Test Action: Modify the notification preferences for the stock manager and confirm that the changes are reflected in the delivery of notifications.
+		Expected Result: Ensure that changes to notification preferences are applied and notifications are delivered accordingly.
+
+5. As a customer, I want to view the availability of a product before making a purchase, so that I can make an informed decision.
+	Acceptance criteria:
+	1. Display the current stock quantity of a product on the product details page.
+	2. Clearly indicate whether the product is in stock or out of stock.
+
+	TEST STORY GROOMING:
+
+	a. Display the current stock quantity of a product on the product details page:
+		Test Action: Navigate to the product details page for a specific product.
+		Expected Result: Confirm that the current stock quantity of the product is prominently displayed on the product details page.
+
+	b. Verify the accuracy of the displayed stock quantity:
+		Test Action: Perform stock-related operations, such as adding or removing products, and check if the displayed stock quantity is dynamically updated.
+		Expected Result: Ensure that the displayed stock quantity accurately reflects the latest changes made to the stock.
+
+	c. Clearly indicate whether the product is in stock or out of stock:
+		Test Action: Perform actions that affect the stock status (e.g., set a product to out of stock) and observe the indication on the product details page.
+		Expected Result: Confirm that the product's availability status (in stock or out of stock) is clearly indicated.
+
+	d. Test the visibility of stock information for different product types:
+		Test Action: Check the product details page for various types of products (e.g., physical goods, digital downloads) 
+			     and confirm that the stock information is appropriately displayed.
+		Expected Result: Ensure that the stock information is visible and relevant to the specific type of product.
+
+	e. Verify the behavior for products with zero stock:
+		Test Action: Set a product's stock quantity to zero and check the product details page.
+		Expected Result: Confirm that the product is marked as "out of stock" or that the stock quantity is displayed as zero.
+
+	f. Test the responsiveness of the product details page:
+		Test Action: Access the product details page from devices with various screen sizes (desktop, tablet, mobile) and confirm that the display is responsive.
+		Expected Result: Ensure that the page layout adapts appropriately to different screen sizes, 
+				 maintaining usability and readability of the stock information.
+
+	g. Verify the clarity of the indication for a limited stock quantity:
+		Test Action: Set a low stock threshold for a product and observe how the product's availability is indicated.
+		Expected Result: Confirm that the system clearly indicates when a product is in limited stock, based on the specified threshold.
+
+	h. Confirm that the product remains visible even when out of stock:
+		Test Action: Set a product to out of stock and verify that the product details page remains accessible.
+		Expected Result: Ensure that customers can still view the product details even if the product is currently out of stock.
+	
+	i. Test the behavior when a product is temporarily unavailable:
+		Test Action: Temporarily disable the sale of a product and check the product details page.
+		Expected Result: Confirm that the product is marked as temporarily unavailable or that a clear message is displayed 
+				 indicating its unavailability for purchase.
+
+6. As a stock manager, I want to track the history of stock changes for each product, so that I can analyze trends and identify issues.
+	Acceptance criteria:
+	1. Maintain a log of stock changes, including details such as timestamp, old stock quantity, and new stock quantity.
+	2. Provide a report or interface to view the stock change history for each product.
+
+	TEST STORY GROOMING:
+		
+	a. Maintain a log of stock changes, including details such as timestamp, old stock quantity, and new stock quantity:
+		Test Action: Perform various stock-related operations, such as adding, updating, or removing products, and check if a log of these changes is created.
+		Expected Result: Confirm that the system maintains a log for each stock change, including the timestamp, old stock quantity, and new stock quantity.
+
+	b. Verify the accuracy of the logged information:
+		Test Action: Retrieve the stock change log for a specific product and compare the logged information with the actual changes made to the stock.
+		Expected Result: Ensure that the information in the log accurately reflects the stock changes, including the correct timestamp, 
+				 old stock quantity, and new stock quantity.
+
+	c. Test the behavior when stock changes are made concurrently:
+		Test Action: Simulate concurrent stock changes for a product from multiple sources and check if the log accurately captures all changes without conflicts.
+		Expected Result: Confirm that the system handles concurrent stock changes gracefully and updates the log without data integrity issues.
+
+	d. Verify the storage capacity of the stock change log:
+		Test Action: Generate a large number of stock changes and confirm that the system can handle and store the log entries without performance degradation.
+		Expected Result: Ensure that the system's storage capacity for the stock change log is sufficient for a reasonable volume of changes.
+
+	e. Test the behavior when a product is removed from the stock:
+		Test Action: Remove a product from the stock and check if the log accurately records the removal, including details such 
+			     as the timestamp and the fact that the product was removed.
+		Expected Result: Confirm that the log reflects the removal of the product, providing information about when and why it was removed.
+
+	f. Verify the security of the stock change log:
+		Test Action: Attempt to access the stock change log without proper authorization.
+		Expected Result: Confirm that unauthorized users cannot access the stock change log, ensuring the security and privacy of stock-related information.
+
+	g. Confirm that the log captures manual adjustments:
+		Test Action: Manually adjust the stock quantity of a product and check if the log captures this manual adjustment.
+		Expected Result: Ensure that manual adjustments to the stock are recorded in the log, providing transparency and traceability.
+
+	h. Test the retrieval of the stock change history for each product:
+		Test Action: Access the report or interface designed for viewing the stock change history for a specific product.
+		Expected Result: Confirm that the system provides a comprehensive report or interface that displays the stock change history, 
+				 including timestamps, old stock quantities, and new stock quantities.
+
+	i. Verify the search and filter functionality for the stock change history:
+		Test Action: Search for specific stock change events or filter the stock change history based on criteria such as date range or type of change.
+		Expected Result: Confirm that the search and filter functionality allows the stock manager to quickly locate and analyze specific stock change events.
+
+7. As an administrator, I want to disable the sale of a product temporarily, so that customers cannot purchase it during maintenance or other special circumstances.
+	Acceptance criteria:	
+	1. Provide an option to disable the sale of a specific product.
+	2. Ensure that the product is marked as unavailable for purchase on the frontend.
+
+	TEST STORY GROOMING:
+
+	1. Provide an option to disable the sale of a specific product:
+		Test Action: Access the administrative interface or settings designed for product management.
+		Expected Result: Confirm that there is an option to disable the sale of a specific product, typically through a toggle or checkbox.
+
+	2. Verify the accurate application of the disable sale option:
+		Test Action: Disable the sale of a product and check if the changes are saved.
+		Expected Result: Confirm that the system accurately applies the disable sale option for the specified product.
+
+	3. Confirm that the disable sale option affects the product on the frontend:
+		Test Action: Disable the sale of a product and visit the product details page on the frontend.
+		Expected Result: Ensure that the product is visibly marked as unavailable for purchase, with appropriate messaging indicating the temporary unavailability.
+
+	4. Test the behavior when attempting to add a disabled product to the shopping cart:
+		Test Action: Disable the sale of a product and attempt to add it to the shopping cart.
+		Expected Result: Confirm that the system prevents customers from adding the disabled product to the shopping cart 
+				 and displays a message indicating its unavailability.
+	
+	5. Verify that disabled products are excluded from product listings:
+		Test Action: Disable the sale of a product and check if it is excluded from product listings or search results on the frontend.
+		Expected Result: Ensure that disabled products do not appear in lists of available products, 
+				 maintaining a clear distinction between available and unavailable items.
+
+	6. Test the behavior when attempting to purchase a disabled product:
+		Test Action: Disable the sale of a product and attempt to complete the purchase process for that product.
+		Expected Result: Confirm that customers cannot proceed with the purchase of a disabled product, 
+				 receiving a message that the product is currently unavailable.
+
+	7. Verify the display of a clear and informative message for disabled products:
+		Test Action: Disable the sale of a product and review the messaging displayed on the frontend.
+		Expected Result: Ensure that customers are presented with a clear and informative message explaining 
+				 that the product is temporarily unavailable for purchase.
+
+	8. Test the behavior when attempting to share a link to a disabled product:
+		Test Action: Disable the sale of a product and attempt to share the product link with others.
+		Expected Result: Confirm that the shared link directs users to a page indicating that the product is currently disabled and unavailable for purchase.
+
+	9. Verify the accessibility of the disable sale option for administrators:
+		Test Action: Log in as an administrator with different roles and permissions and confirm that the disable sale option is 
+			     accessible only to authorized users.
+		Expected Result: Ensure that only administrators with the appropriate permissions can access and use the disable sale option.
+
+8. As a stock manager, I want to remove a product from the stock, so that it is no longer available for purchase.
+	Acceptance criteria:
+	1. Provide the ability to select a product and remove it from the stock.
+	2. Confirm that the product is successfully removed and no longer appears in the list of available products.
+
+	TEST STORY GROOMING:
+
+	1. Provide the ability to select a product and remove it from the stock:
+		Test Action: Access the interface or page for managing stock, and select a specific product to remove.
+		Expected Result: Confirm that there is a clear option or button to remove the selected product from the stock.
+
+	2. Verify the accurate application of the product removal option:
+		Test Action: Remove a product and check if the changes are saved.
+		Expected Result: Confirm that the system accurately applies the product removal option for the specified product.
+	
+	3. Confirm that the removed product is excluded from product listings:
+		Test Action: Remove a product and check if it is excluded from product listings or search results on the frontend.
+		Expected Result: Ensure that the removed product does not appear in lists of available products, 
+				 maintaining a clear distinction between available and removed items.
+
+	4. Test the behavior when attempting to add a removed product to the shopping cart:
+		Test Action: Remove a product and attempt to add it to the shopping cart.
+		Expected Result: Confirm that the system prevents customers from adding the removed product to the shopping 
+				 cart and displays a message indicating its unavailability.
+
+	5. Verify that removed products are not displayed on the product details page:
+		Test Action: Remove a product and check if it is no longer visible on the product details page on the frontend.
+		Expected Result: Ensure that the removed product is not displayed, and customers are unable to view its details.
+	
+	6. Test the behavior when attempting to purchase a removed product:
+		Test Action: Remove a product and attempt to complete the purchase process for that product.
+		Expected Result: Confirm that customers cannot proceed with the purchase of a removed product, 
+				 receiving a message that the product is currently unavailable.
+
+	7. Verify the display of a clear and informative message for removed products:
+		Test Action: Remove a product and review the messaging displayed on the frontend.
+		Expected Result: Ensure that customers are presented with a clear and informative message explaining 
+				 that the product has been removed and is no longer available for purchase.
+
+	8. Test the behavior when attempting to share a link to a removed product:
+		Test Action: Remove a product and attempt to share the product link with others.
+		Expected Result: Confirm that the shared link directs users to a page indicating that the product has been removed and is no longer available for purchase.
+	
+	9. Verify the accessibility of the remove product option for stock managers:
+		Test Action: Log in as a stock manager with different roles and permissions and confirm that the remove product 
+			     option is accessible only to authorized users.
+		Expected Result: Ensure that only stock managers with the appropriate permissions can access and use the remove product option.
